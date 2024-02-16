@@ -1,0 +1,8 @@
+prefix=/home/kjk/catkin_ws/install
+
+Name: ros_topic_sensorsim
+Description: Description of ros_topic_sensorsim
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

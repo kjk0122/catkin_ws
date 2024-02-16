@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/kjk/catkin_ws/src/ros_xyz/build/devel/setup.sh
