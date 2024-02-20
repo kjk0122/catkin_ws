@@ -5,7 +5,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <box size="2 10 0.5"/> <!-- Adjusted size for a car body -->
+        <box size="2 1 0.5"/> <!-- Adjusted size for a car body -->
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>

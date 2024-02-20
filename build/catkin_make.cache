@@ -1,2 +1,2 @@
-kjk_urdf
--DCATKIN_DEVEL_PREFIX=/home/kjk/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kjk/catkin_ws/install -DCATKIN_WHITELIST_PACKAGES=kjk_urdf -G Unix Makefiles
+ros_motor
+-DCATKIN_DEVEL_PREFIX=/home/kjk/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kjk/catkin_ws/install -DCATKIN_WHITELIST_PACKAGES=ros_motor -G Unix Makefiles
