@@ -1,50 +1,92 @@
 <?xml version="1.0" ?>
-<robot name="kjk">
-<!-- robot body link -->
-<link name="body_link">
-<visual>
-<origin rpy="0 0 0" xyz="0 0 0"/> <!-- rpy: roll pitch yaw origin: origin point-->
-<geometry>
-      <box size="1 0.6 0.3"/> <!-- box size -->
-</geometry>
-<material name="red">
-      <color rgba="1 0 0 1"/>
-</material>
-</visual>
-</link>
-<joint name="wheel1_joint" type="continuous">
-<parent link="body_link"/>
-<child link="wheel1_link" />
-<origin xyz="-0.3 -0.35 -0.1" rpy="0 0 0"/>
-<axis xyz="0 1 0" />
-</joint>
-<link name="wheel1_link">
-<visual>
-<origin rpy="1.570795 0 0" xyz="0 0 0"/>
-<geometry>
-<cylinder length="0.1" radius="0.15"/>
-</geometry>
-<material name="yellow">
-<color rgba="1 1 0 1"/>
-</material>
-</visual>
-</link>
+<robot name="kjk_car">
+  <!-- car body link -->
+  <link name="body_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="2 10 0.5"/> <!-- Adjusted size for a car body -->
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+  </link>
 
-<joint name="wheel2_joint" type="continuous">
-<parent link="body_link"/>
-<child link="wheel2_link" />
-<origin xyz="-0.3 -0.35 -0.1" rpy="0 0 0"/>
-<axis xyz="0 1 0" />
-</joint>
-<link name="wheel2_link">
-<visual>
-<origin rpy="-1.570795 0 0" xyz="0 0 0"/>
-<geometry>
-<cylinder length="0.1" radius="0.15"/>
-</geometry>
-<material name="yellow">
-<color rgba="1 1 0 1"/>
-</material>
-</visual>
-</link>
+  <!-- front right wheel joint -->
+  <joint name="front_right_wheel_joint" type="continuous">
+    <parent link="body_link"/>
+    <child link="front_right_wheel_link" />
+    <origin xyz="0.9 0.5 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <link name="front_right_wheel_link">
+    <visual>
+      <origin rpy="-1.570795 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.2" radius="0.2"/> <!-- Adjusted length and radius for front right wheel -->
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- front left wheel joint -->
+  <joint name="front_left_wheel_joint" type="continuous">
+    <parent link="body_link"/>
+    <child link="front_left_wheel_link" />
+    <origin xyz="0.9 -0.5 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <link name="front_left_wheel_link">
+    <visual>
+      <origin rpy="1.570795 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.2" radius="0.2"/> <!-- Adjusted length and radius for front left wheel -->
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- rear right wheel joint -->
+  <joint name="rear_right_wheel_joint" type="continuous">
+    <parent link="body_link"/>
+    <child link="rear_right_wheel_link" />
+    <origin xyz="-0.9 0.5 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <link name="rear_right_wheel_link">
+    <visual>
+      <origin rpy="-1.570795 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.2" radius="0.2"/> <!-- Adjusted length and radius for rear right wheel -->
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- rear left wheel joint -->
+  <joint name="rear_left_wheel_joint" type="continuous">
+    <parent link="body_link"/>
+    <child link="rear_left_wheel_link" />
+    <origin xyz="-0.9 -0.5 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <link name="rear_left_wheel_link">
+    <visual>
+      <origin rpy="1.570795 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.2" radius="0.2"/> <!-- Adjusted length and radius for rear left wheel -->
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+
 </robot>
