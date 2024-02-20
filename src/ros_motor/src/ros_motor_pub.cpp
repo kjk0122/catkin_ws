@@ -11,13 +11,13 @@ int main(int argc, char **argv)
 
   ros::Publisher ros_motor_pub = nh.advertise<ros_motor::angle>("ros_motor_msg", 100);
 
-  ros::Rate loop_rate(0.4);
+  ros::Rate loop_rate(1);
 
   ros_motor::angle msg;
 
   serial::Serial ser;
   ser.setPort("/dev/ttyACM0");
-  ser.setBaudrate(115200);
+  ser.setBaudrate(9600);
   serial::Timeout timeout = serial::Timeout::simpleTimeout(1000);
   ser.setTimeout(timeout);
 
@@ -44,10 +44,7 @@ while (ros::ok())
             msg.angle = data;
             ROS_INFO("Sending message: %d", msg.angle);
             ros_motor_pub.publish(msg);
-
-            // 시리얼 포트로 다시 보내기
-            std::string data_to_send = "Received: " + data_str;
-            ser.write(data_to_send);
+            ser.write(data_str);
         }
     } catch (const std::invalid_argument& e) {
         ROS_ERROR_STREAM("An exception occurred while converting string to integer: " << e.what());
