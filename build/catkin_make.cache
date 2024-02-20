@@ -1,2 +1,2 @@
-ros_motor:ros_red:ros_serial:ros_service:ros_topic:ros_topic_sensorsim:ros_xyz
--DCATKIN_DEVEL_PREFIX=/home/kjk/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kjk/catkin_ws/install -G Unix Makefiles
+kjk_urdf
+-DCATKIN_DEVEL_PREFIX=/home/kjk/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kjk/catkin_ws/install -DCATKIN_WHITELIST_PACKAGES=kjk_urdf -G Unix Makefiles

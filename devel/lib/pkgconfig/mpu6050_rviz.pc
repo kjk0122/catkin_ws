@@ -1,0 +1,8 @@
+prefix=/home/kjk/catkin_ws/devel
+
+Name: mpu6050_rviz
+Description: Description of mpu6050_rviz
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp sensor_msgs serial std_msgs std_srvs tf

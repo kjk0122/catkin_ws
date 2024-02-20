@@ -1,0 +1,8 @@
+prefix=/home/kjk/catkin_ws/devel
+
+Name: kjk_urdf
+Description: Description of kjk_urdf
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs joint_state_publisher_gui roscpp rviz tf urdf

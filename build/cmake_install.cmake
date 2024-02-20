@@ -131,13 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/kjk/catkin_ws/build/gtest/cmake_install.cmake")
-  include("/home/kjk/catkin_ws/build/ros_motor/cmake_install.cmake")
-  include("/home/kjk/catkin_ws/build/ros_serial/cmake_install.cmake")
-  include("/home/kjk/catkin_ws/build/ros_service/cmake_install.cmake")
-  include("/home/kjk/catkin_ws/build/ros_topic/cmake_install.cmake")
-  include("/home/kjk/catkin_ws/build/ros_topic_sensorsim/cmake_install.cmake")
-  include("/home/kjk/catkin_ws/build/ros_xyz/cmake_install.cmake")
-  include("/home/kjk/catkin_ws/build/ros_red/cmake_install.cmake")
+  include("/home/kjk/catkin_ws/build/kjk_urdf/cmake_install.cmake")
 
 endif()
 
